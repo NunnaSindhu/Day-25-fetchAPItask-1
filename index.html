@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="fetchAPItask-1_styles.css" />
+    <title>Balldon'tlie task</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron mystyle">
+        <h1 class="display-4">Balldon'tlie API</h1>
+        <p class="lead"><mark>MASTER RECORD</mark></p>
+        <hr class="my-4" />
+        <p>
+          The balldontlie API provides data about NBA basketball, including
+          players, teams, games, and statistics. Developers can use the API to
+          retrieve player-specific season averages. The balldontlie API offers
+          JSON formatted responses.
+        </p>
+        <button class="btn btn-primary" onclick="getData()">
+          Click Here For More Details
+        </button>
+      </div>
+      <div class="input-container">
+        <input
+          type="search"
+          class="search-box"
+          placeholder="Search here for the player"
+        />
+        <button class="searchbtn">Search</button>
+        <button class="clearbtn">Clear</button>
+      </div>
+      <div class="table-responsive-sm table-heading">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Player ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Position</th>
+              <th scope="col">Team-Name</th>
+              <th scope="col">City</th>
+              <th scope="col">Conference</th>
+              <th scope="col">Division</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- //create table to display the players details -->
+      <div class="result"></div>
+    </div>
+    <script src="fetchAPI-task-1.js"></script>
+  </body>
+</html>
