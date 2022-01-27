@@ -1,5 +1,5 @@
-body{
-    background-color: lightgoldenrodyellow;
+body {
+  background-color: lightgoldenrodyellow;
 }
 .mystyle > h1 {
   text-align: center;
@@ -7,51 +7,118 @@ body{
 }
 .lead {
   text-align: center;
- 
-  }
-  .input-container{
-    display:flex; 
-    font-size:20px; 
-    padding-bottom:20px;
-   
-  }
+}
+.input-container {
+  display: flex;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
 input[type="search"] {
-    margin:10px;
-    width:100%;
-    border-radius: 5px;
-    padding:10px;
+  margin: 10px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
 }
-input[type="search"]:focus{
+input[type="search"]:focus {
   background-color: lightpink;
-  color:blue;
+  color: blue;
 }
-.input-container>button{
-  margin:10px;
-  width:15%;
-  border-radius: 5px;  
-  padding:5px;
+.input-container > button {
+  margin: 10px;
+  width: 15%;
+  border-radius: 5px;
+  padding: 5px;
 }
-.input-container>button:hover{
-  background-color:lightgreen;
+.input-container > button:hover {
+  background-color: lightgreen;
 }
-thead,tbody{
-  
-  text-align:center;
+thead,
+tbody {
+  text-align: center;
 }
 table {
   table-layout: fixed;
-  width:100%;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #cdcdcd;
+  padding: 2px;
 }
 
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
- /* @media screen and (max-width:600px) {
-  table {
-    table-layout: fixed;
-    width:100%;
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
   }
-  .table-heading, .table-container{
-    overflow-y: hidden;
-    margin-bottom: 15px;
-    min-height: .01%;
+
+  tr {
+    border-bottom: 1px solid #ccc;
   }
- } */
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  td:nth-of-type(1):before {
+    content: "Player ID";
+  }
+  td:nth-of-type(2):before {
+    content: "First Name";
+  }
+  td:nth-of-type(3):before {
+    content: "Last Name";
+  }
+  td:nth-of-type(4):before {
+    content: "Position";
+  }
+  td:nth-of-type(5):before {
+    content: "Team-Name";
+  }
+  td:nth-of-type(6):before {
+    content: "City";
+  }
+  td:nth-of-type(7):before {
+    content: "Conference";
+  }
+  td:nth-of-type(8):before {
+    content: "Division";
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    width: 495px;
+  }
+}
